@@ -1,4 +1,4 @@
-import Account from "../pages/accounts/Account";
+import Account from "../pages/accounts";
 import Category from "../pages/category/Category";
 import Home from "../pages/home/Home";
 import Profile from "../pages/profile/Profile";
