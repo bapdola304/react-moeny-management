@@ -1,0 +1,24 @@
+.home-category-menu {
+  &__item {
+    padding: 8px 16px;
+    border: 1px solid #b2b2b2;
+    border-radius: 30px;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .active {
+    background: green;
+    color: white;
+    border: 1px solid green;
+  }
+}

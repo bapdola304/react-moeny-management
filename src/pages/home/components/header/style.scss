@@ -1,0 +1,15 @@
+.home-header {
+  &__avatar {
+    img {
+      border-radius: 100%;
+      border: 1px solid black;
+    }
+  }
+
+  &__title {
+    .title1 {
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+}

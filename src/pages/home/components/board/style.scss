@@ -1,0 +1,13 @@
+.home-board {
+  padding: 16px;
+  background: linear-gradient(80.7deg, #ffffff -3.9%, rgb(48, 156, 79) 91.2%);
+  border-radius: 15px;margin: 32px 0px;
+
+  .income__amount {
+    color: green;
+  }
+
+  .expense__amount {
+    color: #F44336;
+  }
+}

@@ -1,0 +1,12 @@
+.home-history-list {
+  &__content {
+    overflow: scroll;
+    height: 500px;
+  }
+
+  &__item {
+    background: white;
+    border-radius: 15px;
+    padding: 12px 16px;
+  }
+}
