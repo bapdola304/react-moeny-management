@@ -8,6 +8,8 @@ import {
 import ProtectedRoute from "./ProtectedRoute";
 import { appRoutes } from "./Routes";
 import MainLayout from "../layout/main_layout/MainLayout";
+import Login from "../layout/login";
+import SignUp from "../layout/sign_up";
 
 const getRoutes = (routes: any) => {
   return (
@@ -31,7 +33,8 @@ const MainRouter = () => {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="/" element={<Navigate to="/app" replace />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<MainLayout />}>

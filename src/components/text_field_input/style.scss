@@ -1,0 +1,74 @@
+.input-box {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border: var(--bs-border-width) solid #758a9e;
+    transition: 0.5s;
+    font-size: 18px;
+
+    &:focus {
+      outline: none;
+      border: var(--bs-border-width) solid #758a9e;
+      box-shadow: none
+    }
+  }
+
+  .form-control.is-invalid {
+    background: none;
+  }
+
+  &__password-icon {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    padding: 12px;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+
+  span {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    padding: 12px;
+    pointer-events: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    color: #758a9e;
+  }
+
+  &:focus-within span {
+    color: white;
+    transform: translateY(8px) translateY(-18px);
+    font-size: 12px;
+    padding: 2px 8px;
+    background: green;
+    letter-spacing: 3px;
+    border-radius: 5px;
+  }
+
+  .valid {
+    color: white;
+    transform: translateY(8px) translateY(-18px);
+    font-size: 12px;
+    padding: 2px 8px;
+    background: green;
+    letter-spacing: 3px;
+    border-radius: 5px;
+  }
+
+  .valid-input {
+    border: var(--bs-border-width) solid green;
+  }
+
+  &:focus-within input {
+    border: var(--bs-border-width) solid green;
+  }
+}

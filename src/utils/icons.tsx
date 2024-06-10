@@ -63,6 +63,14 @@ const VerticalDotIcon = ({ width = 32 }) => (
     width={width}
   />
 );
+
+const EyeIcon = ({ width = 32 }) => (
+  <img src={"/src/assets/icons/eye.svg"} alt="home" width={width} />
+);
+
+const EyeOffIcon = ({ width = 32 }) => (
+  <img src={"/src/assets/icons/eye-off.svg"} alt="home" width={width} />
+);
 export {
   AvatarIcon,
   DataIcon,
@@ -73,4 +81,6 @@ export {
   ReloadIcon,
   VerticalDotIcon,
   AddIcon,
+  EyeIcon,
+  EyeOffIcon,
 };

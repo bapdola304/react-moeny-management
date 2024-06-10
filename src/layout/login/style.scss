@@ -1,0 +1,36 @@
+.login {
+  height: 100vh;
+  background: white;
+  padding: 0px 32px;
+  padding-top: 20%;
+
+  &__form {
+    width: 100%;
+  }
+
+  &__submit-button {
+    width: 100%;
+    padding: 14px 0px !important;
+    border-radius: 100px !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    background: green !important;
+    transition: 0.5s !important;
+    margin-top: 20px;
+
+    &:active {
+      transform: scale(1.05);
+      transition: 0.5s;
+    }
+  }
+
+  &__have-account {
+    a {
+      color: green;
+    }
+  }
+}
+
+.sign-up {
+  padding-top: 5%;
+}
