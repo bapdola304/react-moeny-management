@@ -5,12 +5,34 @@ import TextFieldInput from "../../components/text_field_input";
 // @ts-ignore
 import { AvForm } from "availity-reactstrap-validation";
 import { Link } from "react-router-dom";
+import Loading from "../../components/loading";
+import { useGetUsers } from "../../hooks/useAuth";
+import { isEmpty } from "../../utils/data_format";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  function handleSubmit(event: any, errors: any, values: any) {}
+  const navigate = useNavigate();
+
+  const { data, isLoading, isError }: any = useGetUsers();
+  console.log(data);
+  function handleSubmit(event: any, errors: any, values: any) {
+    if (isEmpty(errors)) {
+      const username = values.username;
+      const password = values.password;
+      const isInArray = data.some(
+        (user: any) => user.username === username && user.password === password
+      );
+      if (isInArray) {
+        const token = "token_check_yes";
+        localStorage.setItem("token", token);
+        navigate("/app");
+      }
+    }
+  }
 
   return (
     <div className="login d-flex flex-column align-center">
+      {isLoading && <Loading />}
       <div className="login__logo">
         <img src="/src/assets/icons/logo.png" alt="logo" width={320} />
       </div>
